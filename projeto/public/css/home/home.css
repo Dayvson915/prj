@@ -1,0 +1,10 @@
+/* Estilo da Home */
+#home h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #b3b3b3;
+}
