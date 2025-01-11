@@ -1,0 +1,51 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #b3b3b3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: block;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Esconde as seções que não estão ativas */
+.content-section {
+    display: none;
+}
+
+/* Exibe apenas a seção ativa */
+.content-section.active {
+    display: block;
+}

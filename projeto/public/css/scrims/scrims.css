@@ -1,0 +1,33 @@
+/* Estilo das Scrims */
+#scrims h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.scrim-list {
+    list-style: none;
+    padding: 0;
+}
+
+.scrim-list li {
+    padding: 10px;
+    background-color: #23272a;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #ff4500;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.fav-btn {
+    background-color: transparent;
+    color: #ff4500;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
