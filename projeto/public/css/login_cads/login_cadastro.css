@@ -58,6 +58,19 @@ form {
   min-width: 268px;
   padding: 0 10px;
 }
+from.accesar_form{
+  opacity: 1;
+  transition: 0,5s ease-in-out;
+  transition-delay: 1s;
+
+}
+from.cadastrar_form{
+  opacity: 0;
+  transition: 0,5s ease-in-out;
+  transition-delay: 1s;
+
+}
+cadastrar_form
 
 .title {
   font-size: 35px;
@@ -175,6 +188,9 @@ a {
   text-align: center;
   z-index: 6;
 }
+.left-panel{
+  pointer-events:none ;
+}
 
 .content {
   color: #fff;
@@ -197,6 +213,10 @@ a {
   transition-delay: 0,4s; 
 
 }
+.account-text{
+  display: none;
+}
+
  /*animacao */
  
  
@@ -223,16 +243,63 @@ a {
   transform: translateX(0);
 }
 
+.container.sign-up-mode form.acessar-form{
+  opacity: 0;
+}
 
+.container.sign-up-mode form.cadastrar_form{
+  opacity: 1;
+}
 
+.container.sign-up-mode .right-panel{
+  pointer-events: none;
+}
 
+.container.sign-up-mode .left-panel{
+  pointer-events: all;
+}
 
+/*reponsivida para smartfones e outros aparelhos */
+@media (max-width:779px) {
+  .container{
+    width: 100vw;
+    height: 100vw;
+  }
+  
+}
 
+@media (max-width:635px) {
+  .container::before{
+    display: none;
+  }
+  form{
+    width: 80%;
+  }
+  form.cadastrar_form{
+    display: none;
+  }
 
+  .container.sign-up-mode2 form.cadastrar_form{
+    display: flex;
+    opacity: 1;
+  }
+  .container.sign-up-mode2 form.accesar_form{
+display: none;
 
+  }
+  .paineis-container{
+    display: none;
+  }
 
+  .account-text{
+    display: initial;
+    margin-top: 30px;
+  }
+}
 
-
-
-
+@media (max-width:635px){
+  form{
+    width: 90%;
+  }
+}
 
