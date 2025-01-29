@@ -1,0 +1,233 @@
+:root {
+    --bg-dark: #111827;
+    --secondary-color: #1F2937;
+    --primary-color: #FF4655;
+    --text-color: #F9FAFB;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    margin-bottom: auto;
+}
+
+.nav-links li {
+    margin-bottom: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links li.active a {
+    background-color: var(--primary-color);
+}
+
+.nav-links i {
+    width: 20px;
+    text-align: center;
+}
+
+.user-section {
+    margin-top: auto;
+}
+
+.user-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(249, 250, 251, 0.2);
+    margin-bottom: 15px;
+}
+
+.user-logged-out {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-button, .register-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.login-button:hover, .register-button:hover {
+    opacity: 0.9;
+}
+
+.user-logged-in.hidden {
+    display: none;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tournament-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border: 1px solid #374151;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.team-photo-upload {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 2px dashed var(--secondary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.team-photo-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.team-photo-preview .upload-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.team-photo-preview span {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.team-photo-upload:hover {
+    border-color: var(--primary-color);
+}
+
+.team-photo-upload.has-image {
+    border: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.team-photo-upload.has-image .team-photo-preview {
+    display: none;
+}
+
+.btn-create-tournament {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}

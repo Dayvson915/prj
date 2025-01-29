@@ -1,0 +1,135 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrimHub - Torneios FPS</title>
+    <link rel="stylesheet" href="../css/scrims/scrins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path fill="#ff4655"
+                        d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm5 27.5l-5-2.5-5 2.5V5h10v22.5z" />
+                </svg>
+                <h1>ScrimHub</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="https://scrimhub.com/dashboard">
+                        <i class="fa-solid fa-grid"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scrimhub.com/tournaments">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span>Torneios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scrimhub.com/teams">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Times</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scrimhub.com/schedule">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Agenda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://scrimhub.com/stats">
+                        <i class="fa-solid fa-chart-bar"></i>
+                        <span>Estatísticas</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="user-section">
+                <div class="user-divider"></div>
+                <div class="user-logged-out">
+                    <button class="login-button">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Entrar
+                    </button>
+                    <button class="register-button">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Registrar
+                    </button>
+                </div>
+                <div class="user-logged-in hidden">
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/40" alt="Perfil">
+                        <div class="user-info">
+                            <h3>Usuário</h3>
+                            <p>Pro Player</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <h2>Criar Torneio/Scrim</h2>
+            </div>
+
+            <div class="tournament-form">
+                <form id="scrims-form">
+                    <div class="form-group">
+                        <label for="team-photo">Foto do Time</label>
+                        <div class="team-photo-upload">
+                            <input type="file" id="team-photo" accept="image/*" class="file-input">
+                            <div class="team-photo-preview">
+                                <i class="fas fa-plus upload-icon"></i>
+                                <span>Adicionar Foto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-name">Nome do Time</label>
+                        <input type="text" id="team-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tournament-date">Data</label>
+                        <input type="date" id="tournament-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tournament-time">Hora</label>
+                        <input type="time" id="tournament-time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room-id">ID da Sala</label>
+                        <input type="text" id="room-id" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="max-kills">Máximo de Abates</label>
+                        <select id="max-kills">
+                            <option value="3">3 Kills</option>
+                            <option value="5" selected>5 Kills</option>
+                            <option value="10">10 Kills</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-create-tournament">Criar Torneio</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
