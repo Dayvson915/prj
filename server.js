@@ -10,14 +10,20 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'templates', 'home.html'));
 });
 
+
 // Rota para a página de Login
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'templates', 'login_cadastro.html'));
 });
 
+// Rota para a página de index
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'templates', 'index.html'));
+});
+
 // Rota para a página de Scrims
-app.get('/scrims', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'templates', 'scrims.html'));
+app.get('/scrim', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'templates', 'scrim.html'));
 });
 
 // Rota para a página de Perfil
@@ -29,44 +35,8 @@ app.get('/perfil', (req, res) => {
 const port = 3000;
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
+  console.log(`Acesse http://localhost:${port}`);
 });
 
-// const express = require('express');
-// const app = express();
-// const port = 3000;
 
-// // Definindo uma rota simples
-// app.get('/', (req, res) => {
-//   res.send('Olá, Mundo!');
-// });
-
-// // Configurando o servidor para rodar na porta 3000
-// app.listen(port, () => {
-//   console.log(`Servidor rodando em http://localhost:${port}`);
-// });
-
-
-
-
-
-
-
-// // Importa o Express
-// const express = require('express');
-
-// // Cria uma aplicação Express
-// const app = express();
-
-// // Define a porta onde o servidor vai rodar
-// const PORT = 3000;
-
-// // Rota para a página principal
-// app.get('/', (req, res) => {
-//   res.send('Olá, mundo!');
-// });
-
-// // Inicia o servidor
-// app.listen(PORT, () => {
-//   console.log(`Servidor rodando na porta ${PORT}`);
-// });
 
