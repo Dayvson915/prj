@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         const data = await response.json();
-        if (data.redirect) {
+        if (response.ok) {
             window.location.href = data.redirect;
         } else {
             alert(data.erro);

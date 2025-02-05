@@ -13,23 +13,22 @@
 
 <body>
   <!-- Container Principal -->
-   <p>gf</p>
   <div class="container">
     <!-- Seção de Login e Cadastro -->
     <div class="login_cadastro">
       <!-- Formulário de Login -->
-      <form action="#" class="acessar_form">
+      <form action="/login" method="POST" class="acessar_form">
         <h2 class="title">Login</h2>
         <!-- Campo de Nome de Usuário -->
         <div class="grupo-campo">
           <i class="fas fa-user"></i>
-          <input type="text" id="usuario" name="usuario" placeholder="Digite seu nome de usuário" required>
+          <input type="text" id="login-nome" name="nome" placeholder="Digite seu nome de usuário" required>
         </div>
 
         <!-- Campo de Senha -->
         <div class="grupo-campo">
           <i class="fas fa-lock"></i>
-          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+          <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
         </div>
 
         <!-- Link "Esqueceu sua senha?" -->
@@ -49,12 +48,12 @@
       </form>
       <p class="account-text">Não tem uma conta? <a href="" id="sing-up-bnt2">entrar</a></p>
       <!-- Formulário de Cadastro -->
-      <form action="#" class="cadastrar_form">
+      <form action="/cadastro" method="POST" class="cadastro_form">
         <h2 class="title">Cadastro</h2>
         <!-- Campo de Nome de Usuário -->
         <div class="grupo-campo">
           <i class="fas fa-user"></i>
-          <input type="text" id="cadastro-usuario" name="usuario" placeholder="Escolha um nome de usuário" required>
+          <input type="text" id="cadastro-nome" name="nome" placeholder="Digite seu nome de usuário" required>
         </div>
 
         <!-- Campo de E-mail -->
@@ -111,8 +110,9 @@
   </div>
 
   <!-- JavaScript -->
-   
-  <script src="../js/roll.js"></script>
+
+  <script src="../js/login_cadastro/roll.js"></script>
+  <script src="../js/login_cadastro/alth.js"></script>
 </body>
 
 </html>

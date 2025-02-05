@@ -29,8 +29,42 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'login_cadastro.html'));
 });
 
+const usuarios = new Map(); // Simulação de banco de dados em memória
+
+// Rota para cadastro
+app.post('/cadastro', (req, res) => {
+    const { nome, email, senha } = req.body;
+    
+    if (usuarios.has(nome)) {
+        return res.status(400).json({ erro: 'Usuário já existe' });
+    }
+    
+    usuarios.set(nome, { email, senha });
+    res.status(201).json({ mensagem: 'Usuário cadastrado' });
+});
+
+// Rota para login
+app.post('/login', (req, res) => {
+    const { nome, senha } = req.body;
+    
+    if (!usuarios.has(nome) || usuarios.get(nome).senha !== senha) {
+        return res.status(401).json({ erro: 'Credenciais inválidas' });
+    }
+    
+    req.session.usuarioId = nome;
+    res.json({ redirect: '/index' });
+});
+
+// Middleware de verificação de autenticação
+const verificaAutenticacao = (req, res, next) => {
+    if (!req.session.usuarioId) {
+        return res.redirect('/login');
+    }
+    next();
+};
+
 // Rota para a página de Index
-app.get('/index', (req, res) => {
+app.get('/index', verificaAutenticacao, (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
 });
 
@@ -46,7 +80,5 @@ app.get('/perfil', (req, res) => {
 
 // Iniciar o servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
-
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-
