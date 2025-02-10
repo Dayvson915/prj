@@ -165,8 +165,9 @@ a {
 }
 
 .social-icon:hover {
-  color: #00cccc;
-  border-color: #00cccc;
+  background: #ff4d4d;
+  color: #fff;
+  border-color: #ff4d4d;
 }
 
 .paineis-container {
