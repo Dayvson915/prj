@@ -226,17 +226,36 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.user-profile img {
+.user-profile:hover {
+  background-color: var(--primary-color);
+}
+
+.user-profile .avatar-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile .avatar-icon i {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  opacity: 0.7;
 }
 
 .user-info h3 {
   font-size: 0.875rem;
   font-weight: 500;
+  color: var(--text-color);
 }
 
 .user-info p {
@@ -245,40 +264,7 @@ body {
 }
 
 .user-logged-out {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.login-button,
-.register-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.login-button {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.register-button {
-  background-color: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.login-button:hover,
-.register-button:hover {
-  opacity: 0.9;
+  display: none;
 }
 
 /* Modal Styles */

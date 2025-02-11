@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Times - ScrimHub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="teams.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path fill="#ff4655" d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm5 27.5l-5-2.5-5 2.5V5h10v22.5z"/>
+        </svg>
+        <h1>ScrimHub</h1>
+      </div>
+      
+      <ul class="nav-links">
+        <li>
+          <a href="/index.html">
+            <i class="fa-solid fa-grid-2"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/tournaments">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Torneios</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/teams.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Times</span>
+          </a>
+        </li>
+        <li>
+          <a href="/schedule">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Agenda</span>
+          </a>
+        </li>
+        <li>
+          <a href="/stats">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Estatísticas</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="user-section">
+        <a href="/profile.html" class="user-profile">
+          <div class="avatar-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h3>João Silva</h3>
+            <p>Pro Player</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar times...">
+        </div>
+        <div class="top-bar-actions">
+          <button class="create-team">
+            <i class="fa-solid fa-plus"></i>
+            Criar Time
+          </button>
+        </div>
+      </header>
+
+      <div class="teams-container">
+        <h2>Meus Times</h2>
+        
+        <div class="teams-grid">
+          <div class="team-card">
+            <div class="team-header">
+              <div class="team-avatar">
+                <i class="fa-solid fa-shield"></i>
+              </div>
+              <div class="team-info">
+                <h3>Team Titans</h3>
+                <span class="team-role captain">Capitão</span>
+              </div>
+            </div>
+            <div class="team-stats">
+              <div class="stat">
+                <span class="stat-value">15</span>
+                <span class="stat-label">Partidas</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">10</span>
+                <span class="stat-label">Vitórias</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Membros</span>
+              </div>
+            </div>
+            <div class="team-members">
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>João</span>
+              </div>
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Ana</span>
+              </div>
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Pedro</span>
+              </div>
+              <div class="member-more">+2</div>
+            </div>
+            <button class="manage-team-btn">Gerenciar Time</button>
+          </div>
+
+          <div class="team-card">
+            <div class="team-header">
+              <div class="team-avatar">
+                <i class="fa-solid fa-dragon"></i>
+              </div>
+              <div class="team-info">
+                <h3>Dragons Elite</h3>
+                <span class="team-role">Membro</span>
+              </div>
+            </div>
+            <div class="team-stats">
+              <div class="stat">
+                <span class="stat-value">20</span>
+                <span class="stat-label">Partidas</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">15</span>
+                <span class="stat-label">Vitórias</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Membros</span>
+              </div>
+            </div>
+            <div class="team-members">
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Carlos</span>
+              </div>
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>João</span>
+              </div>
+              <div class="member">
+                <div class="member-avatar">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Maria</span>
+              </div>
+              <div class="member-more">+2</div>
+            </div>
+            <button class="manage-team-btn">Gerenciar Time</button>
+          </div>
+        </div>
+
+        <h2>Times Populares</h2>
+        <div class="teams-grid">
+          <div class="team-card">
+            <div class="team-header">
+              <div class="team-avatar">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div class="team-info">
+                <h3>Kings of Battle</h3>
+                <span class="team-rank">#1 Ranking</span>
+              </div>
+            </div>
+            <div class="team-stats">
+              <div class="stat">
+                <span class="stat-value">50</span>
+                <span class="stat-label">Partidas</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">45</span>
+                <span class="stat-label">Vitórias</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Membros</span>
+              </div>
+            </div>
+            <button class="join-team-btn">Solicitar Para Entrar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="teams.js"></script>
+</body>
+</html>
