@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Time - ScrimHub</title>
+  <link rel="stylesheet" href="../css/index_styles.css">
+  <link rel="stylesheet" href="../css/times.css">
+  <link rel="stylesheet" href="../css/criar-time.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path fill="#ff4655" d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm5 27.5l-5-2.5-5 2.5V5h10v22.5z"/>
+        </svg>
+        <h1>ScrimHub</h1>
+      </div>
+      
+      <ul class="nav-links">
+        <li>
+          <a href="/index">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Scrims</span>
+          </a>
+        </li>
+        <li>
+          <a href="/torneios">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Torneios</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/times">
+            <i class="fa-solid fa-users"></i>
+            <span>Times</span>
+          </a>
+        </li>
+        <li>
+          <a href="/agenda">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Agenda</span>
+          </a>
+        </li>
+        <li>
+          <a href="/stats">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Estatísticas</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="user-section">
+        <a href="/perfil" class="user-profile">
+          <div class="avatar-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h3>João Silva</h3>
+            <p>Pro Player</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="top-bar">
+        <a href="/teams.html" class="back-button">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar para Times
+        </a>
+        <h2>Criar Time</h2>
+      </div>
+      
+      <div class="team-creation-container">
+        <form id="team-form" class="advanced-team-form">
+          <div class="form-header">
+            <h2>Crie seu Time</h2>
+            <p>Adicione uma foto e um nome para seu time de eSports</p>
+          </div>
+          
+          <div class="team-photo-section">
+            <div class="team-photo-upload advanced-upload">
+              <input type="file" id="team-photo" accept="image/*" class="file-input" style="display: none;">
+              <div class="team-photo-preview">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <span>Clique para adicionar foto</span>
+              </div>
+              <div class="photo-overlay">
+                <i class="fas fa-edit"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group team-name-group advanced">
+            <label for="team-name">
+              <i class="fas fa-users"></i>
+              Nome do Time
+            </label>
+            <div class="input-wrapper">
+              <input 
+                type="text" 
+                id="team-name" 
+                placeholder="Digite o nome do seu time" 
+                required
+                maxlength="30"
+              >
+              <span class="character-count">0/30</span>
+            </div>
+            <small class="input-hint">Escolha um nome único e memorável</small>
+          </div>
+          
+          <button type="submit" class="btn-create-team advanced">
+            <i class="fas fa-plus-circle"></i>
+            Criar Time
+          </button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="../js/criar-time.js"></script>
+</body>
+</html>

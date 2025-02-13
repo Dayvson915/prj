@@ -1,0 +1,163 @@
+.invite-players-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .team-photo-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .team-photo-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 1rem;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .team-photo-preview .avatar-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+  
+  .team-info {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .team-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .team-info p {
+    color: #9ca3af;
+  }
+  
+  .players-list {
+    background: var(--secondary-color);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  
+  .search-players {
+    margin-bottom: 2rem;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .search-box input {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    width: 100%;
+  }
+  
+  .search-box input:focus {
+    outline: none;
+  }
+  
+  .players-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .players-table th {
+    text-align: left;
+    padding: 1rem;
+    color: #9ca3af;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .players-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .player-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .player-info .avatar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .player-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .player-name {
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .player-tag {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+  
+  .invite-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .invite-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .invite-btn.invited {
+    background: #10b981;
+    cursor: default;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    width: fit-content;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: var(--primary-color);
+  }

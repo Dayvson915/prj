@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create team button functionality
     const createTeamButton = document.querySelector('.create-team');
     createTeamButton.addEventListener('click', function() {
-      alert('Em breve: Formulário para criar novo time!');
+      window.location.href = '/create-team.html';
     });
   
     // Manage team button functionality
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     manageTeamButtons.forEach(button => {
       button.addEventListener('click', function() {
         const teamName = this.closest('.team-card').querySelector('.team-info h3').textContent;
-        alert(`Em breve: Painel de gerenciamento para o time ${teamName}`);
+        window.location.href = '/invite-players.html';
       });
     });
   

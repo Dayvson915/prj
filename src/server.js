@@ -78,8 +78,27 @@ app.get('/perfil', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'perfil.html'));
 });
 
+// Rota para a página de Convite
+app.get('/convite', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'convite.html'));
+});
+
+// Rota para a página de Times
+app.get('/times', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'times.html'));
+});
+
+// Rota para a página de Agenda
+app.get('/agenda', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'agenda.html'));
+});
+
+// Rota para a página de Torneios
+app.get('/torneios', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'torneios.html'));
+});
+
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
- 
-});
+ });

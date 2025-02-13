@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda - ScrimHub</title>
+  <link rel="stylesheet" href="../css/index_styles.css">
+  <link rel="stylesheet" href="../css/agenda.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path fill="#ff4655" d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm5 27.5l-5-2.5-5 2.5V5h10v22.5z"/>
+        </svg>
+        <h1>ScrimHub</h1>
+      </div>
+      
+      <ul class="nav-links">
+        <li>
+          <a href="/index">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Scrims</span>
+          </a>
+        </li>
+        <li>
+          <a href="/torneios">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Torneios</span>
+          </a>
+        </li>
+        <li>
+          <a href="/times">
+            <i class="fa-solid fa-users"></i>
+            <span>Times</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/agenda">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Agenda</span>
+          </a>
+        </li>
+        <li>
+          <a href="/stats">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Estatísticas</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="user-section">
+        <a href="/perfil" class="user-profile">
+          <div class="avatar-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h3>João Silva</h3>
+            <p>Pro Player</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="schedule-header">
+          <h2>Agenda</h2>
+          <div class="schedule-actions">
+            <button class="schedule-view-btn active" data-view="month">
+              <i class="fas fa-calendar-alt"></i>
+              Mês
+            </button>
+            <button class="schedule-view-btn" data-view="week">
+              <i class="fas fa-calendar-week"></i>
+              Semana
+            </button>
+            <button class="schedule-view-btn" data-view="day">
+              <i class="fas fa-calendar-day"></i>
+              Dia
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="schedule-container">
+        <div class="calendar-nav">
+          <button class="nav-btn prev-month">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h3 class="current-date">Outubro 2023</h3>
+          <button class="nav-btn next-month">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="weekdays">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+          </div>
+          <div class="days">
+            <!-- Days will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="events-list">
+          <h3>Eventos do Dia</h3>
+          <div class="event-card">
+            <div class="event-time">14:00</div>
+            <div class="event-content">
+              <h4>Scrim vs Team Dragons</h4>
+              <p><i class="fas fa-gamepad"></i> VALORANT</p>
+            </div>
+            <div class="event-status confirmed">Confirmado</div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-time">16:30</div>
+            <div class="event-content">
+              <h4>Torneio Regional</h4>
+              <p><i class="fas fa-trophy"></i> CS:GO</p>
+            </div>
+            <div class="event-status pending">Pendente</div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-time">20:00</div>
+            <div class="event-content">
+              <h4>Treino em Equipe</h4>
+              <p><i class="fas fa-users"></i> Team Practice</p>
+            </div>
+            <div class="event-status confirmed">Confirmado</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/agenda.js"></script>
+</body>
+</html>

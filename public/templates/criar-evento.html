@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Evento - ScrimHub</title>
+  <link rel="stylesheet" href="../css/index_styles.css">
+  <link rel="stylesheet" href="../css/criar-evento.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path fill="#ff4655" d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm5 27.5l-5-2.5-5 2.5V5h10v22.5z"/>
+        </svg>
+        <h1>ScrimHub</h1>
+      </div>
+      
+      <ul class="nav-links">
+        <li>
+          <a href="/index">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Scrims</span>
+          </a>
+        </li>
+        <li>
+          <a href="/torneios">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Torneios</span>
+          </a>
+        </li>
+        <li>
+          <a href="/times">
+            <i class="fa-solid fa-users"></i>
+            <span>Times</span>
+          </a>
+        </li>
+        <li>
+          <a href="/agenda">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Agenda</span>
+          </a>
+        </li>
+        <li>
+          <a href="/stats">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Estatísticas</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="user-section">
+        <a href="/perfil" class="user-profile">
+          <div class="avatar-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <h3>João Silva</h3>
+            <p>Pro Player</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="top-bar">
+        <a href="javascript:history.back()" class="back-button">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </a>
+        <h2>Criar Evento</h2>
+      </div>
+      
+      <div class="criar-scrims-container">
+        <div class="event-type-selector-container">
+          <div class="event-type-selector">
+            <div class="event-type-toggle">
+              <input type="radio" id="scrim-type" name="event-type" value="scrim" checked>
+              <label for="scrim-type" class="event-type-label">
+                <i class="fas fa-gamepad"></i>
+                Scrim
+              </label>
+              
+              <input type="radio" id="tournament-type" name="event-type" value="tournament">
+              <label for="tournament-type" class="event-type-label">
+                <i class="fas fa-trophy"></i>
+                Torneio
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <form id="scrim-form" class="scrim-creation-form">
+          <div class="scrim-form-content">
+            <div id="scrim-specific-fields">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="max-kills">Limite de Kills</label>
+                  <select id="max-kills" required>
+                    <option value="5">5 Kills</option>
+                    <option value="10">10 Kills</option>
+                    <option value="15">15 Kills</option>
+                    <option value="20">20 Kills</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div id="tournament-specific-fields" class="hidden">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tournament-type">Tipo de Torneio</label>
+                  <select id="tournament-type-select" required>
+                    <option value="">Selecione o Tipo de Torneio</option>
+                    <option value="single-elimination">Eliminação Simples</option>
+                    <option value="double-elimination">Eliminação Dupla</option>
+                    <option value="round-robin">Todos Contra Todos</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="max-teams">Número Máximo de Times</label>
+                  <input type="number" id="max-teams" min="2" max="64" placeholder="Máximo de Times">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="scrim-date">Data do Evento</label>
+                <input type="date" id="scrim-date" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="scrim-time">Hora do Evento</label>
+                <input type="time" id="scrim-time" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="game-type">Tipo de Jogo</label>
+                <select id="game-type" required>
+                  <option value="">Selecione o Jogo</option>
+                  <option value="blood-strike">Blood Strike</option>
+                  <option value="fortnite">Fortnite</option>
+                  <option value="csgo">CS:GO</option>
+                  <option value="valorant">Valorant</option>
+                  <option value="apex-legends">Apex Legends</option>
+                  <option value="pubg">PUBG</option>
+                  <option value="cod-warzone">Call of Duty: Warzone</option>
+                </select>
+              </div>
+              
+              <div class="form-group" id="room-id-group">
+                <label for="room-id">ID da Sala</label>
+                <input type="text" id="room-id" placeholder="Digite o ID da sala" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="scrim-price">Preço do Evento</label>
+                <div class="price-input-group">
+                  <select id="price-type">
+                    <option value="free">Gratuito</option>
+                    <option value="paid">Pago</option>
+                  </select>
+                  <input 
+                    type="number" 
+                    id="scrim-price" 
+                    placeholder="Valor" 
+                    min="0" 
+                    step="0.01" 
+                    disabled
+                  >
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn-create-team">Criar Evento</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="../css/criar-evento.css"></script>
+</body>
+</html>
