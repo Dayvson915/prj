@@ -68,37 +68,42 @@ app.get('/index', verificaAutenticacao, (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
 });
 
-// Rota para a página de Scrims
-app.get('/scrim', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/templates', 'scrim.html'));
-});
-
-// Rota para a página de Perfil
-app.get('/perfil', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/templates', 'perfil.html'));
-});
-
-// Rota para a página de Convite
-app.get('/convite', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/templates', 'convite.html'));
+// Rota para a página de Torneios
+app.get('/torneios', verificaAutenticacao, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'torneios.html'));
 });
 
 // Rota para a página de Times
-app.get('/times', (req, res) => {
+app.get('/times', verificaAutenticacao, (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'times.html'));
 });
 
+// Rota para a página de Criar Time
+app.get('/criar-time', verificaAutenticacao, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'criar-time.html'));
+});
+
+// Rota para a página de Convite
+app.get('/convite', verificaAutenticacao, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'convite.html'));
+});
+
 // Rota para a página de Agenda
-app.get('/agenda', (req, res) => {
+app.get('/agenda', verificaAutenticacao, (req, res) => {
     res.sendFile(path.join(__dirname, '../public/templates', 'agenda.html'));
 });
 
-// Rota para a página de Torneios
-app.get('/torneios', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/templates', 'torneios.html'));
+// Rota para a página de Perfil
+app.get('/perfil', verificaAutenticacao, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'perfil.html'));
+});
+
+// Rota para a página de Criar Evento
+app.get('/criar-evento', verificaAutenticacao, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/templates', 'criar-evento.html'));
 });
 
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
- });
+});

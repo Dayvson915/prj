@@ -213,13 +213,13 @@ main > section:hover .hero-text p {
     max-width: 400px;
 }
 
-.hero-image svg {
+.hero-image img {
     width: 100%;
     height: auto;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.hero-image svg:hover {
+.hero-image img:hover {
     transform: scale(1.05);
 }
 
